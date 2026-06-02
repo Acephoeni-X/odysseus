@@ -560,7 +560,7 @@ export async function _runModelDownload(panel, model, backend, hostOverride) {
     }
     const data = await res.json();
     if (!data.ok) {
-      uiModule.showToast('Download failed: ' + (data.error || ''));
+      uiModule.showToast('Download failed: ' + (data.error || ''), 9000);
       return;
     }
     _addTask(data.session_id, shortName, 'download', payload);
