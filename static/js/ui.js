@@ -380,6 +380,7 @@ export function showToast(msg, durationOrOpts) {
     clearTimeout(toastEl._hideTimer);
     toastEl.classList.add('exiting');
     toastEl.classList.remove('show');
+    toastEl.style.pointerEvents = '';
   });
   toastEl.appendChild(closeBtn);
 
@@ -437,6 +438,7 @@ export function showError(msg) {
     clearTimeout(toastEl._hideTimer);
     toastEl.classList.add('exiting');
     toastEl.classList.remove('show');
+    toastEl.style.pointerEvents = '';
   });
   toastEl.appendChild(closeBtn);
 
